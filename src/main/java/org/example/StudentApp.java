@@ -12,24 +12,31 @@ public class StudentApp {
         firstStudent.setEmail("");
         firstStudent.setCourse("");
 
-        System.out.println("Details are " + firstStudent.toString());
-        System.out.println("Enter name");
+        //System.out.println("Details are " + firstStudent.toString());
+        //System.out.println("Enter name");
 
-        String name = scan.next();
+        String name = "";
 
-        Student secondStudent = new Student(name);
-        System.out.println("Details are " + secondStudent.toString());
+        //Student secondStudent = new Student(name);
+        //System.out.println("Details are " + secondStudent.toString());
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<String> emails = new ArrayList<>();
+        ArrayList<String> courses = new ArrayList<>();
 
-        System.out.println("Enter Name: ");
-        name = scan.next();
-        System.out.println("Enter Email: ");
-        String Email = scan.next();
-        System.out.println("Enter Course: ");
-        String Course = scan.next();
-        Student thirdStudent = new Student(name, Email, Course);
-        System.out.println("Details are " + thirdStudent.toString());
+        ArrayList<Student> students = new ArrayList<>();
 
+        int i = 0;
+        for(i = 0; i <3; i++) {
+            System.out.println("Enter student"+ i+1 + "Name: ");
+            names.add(scan.next());
+            System.out.println("Enter student"+ i+1 + "Email: ");
+            emails.add(scan.next());
+            System.out.println("Enterstudent"+ i+1 + " Course: ");
+            courses.add(scan.next());
+            students.add(new Student(names.get(i), emails.get(i), courses.get(i)));
 
+        }
+        System.out.println(students);
 
     }
 
