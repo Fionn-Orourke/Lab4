@@ -46,6 +46,10 @@ public class Student {
         this.course = course;
     }
 
+    public Student(String name) {
+        this.name = name;
+    }
+
     public Student(){
         this.name = "";
         this.email = "";
