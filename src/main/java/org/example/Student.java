@@ -1,6 +1,7 @@
 package org.example;
-
+import java.util.Scanner;
 public class Student {
+    Scanner scan = new Scanner(System.in);
     private String name;
 
     public String getName() {
@@ -47,7 +48,8 @@ public class Student {
     }
 
     public Student(String name) {
-        this.name = name;
+
+        this.name = "";
     }
 
     public Student(){
