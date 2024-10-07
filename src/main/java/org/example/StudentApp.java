@@ -11,7 +11,9 @@ public class StudentApp {
 
         System.out.println("Details are "+ firstStudent.toString());
 
-        Student secondStudent = new Student("joe", "joe.123", "civil");
+        Student secondStudent = new Student("bill");
+
+        Student thirdStudent = new Student("joe", "joe.123", "civil");
     }
 
 }
